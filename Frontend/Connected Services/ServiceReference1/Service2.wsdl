@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service2" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50557/Service2.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50557/Service2.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50557/Service2.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService2_book_InputMessage">
+    <wsdl:part name="parameters" element="tns:book" />
+  </wsdl:message>
+  <wsdl:message name="IService2_book_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_exists_InputMessage">
+    <wsdl:part name="parameters" element="tns:exists" />
+  </wsdl:message>
+  <wsdl:message name="IService2_exists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:existsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_isReg_InputMessage">
+    <wsdl:part name="parameters" element="tns:isReg" />
+  </wsdl:message>
+  <wsdl:message name="IService2_isReg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_register_InputMessage">
+    <wsdl:part name="parameters" element="tns:register" />
+  </wsdl:message>
+  <wsdl:message name="IService2_register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="IService2_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUser" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_edit_InputMessage">
+    <wsdl:part name="parameters" element="tns:edit" />
+  </wsdl:message>
+  <wsdl:message name="IService2_edit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:editUserName" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:editPassword" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editPhoneNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:editPhoneNumber" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editPhoneNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editPhoneNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:editAddress" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_emailExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:emailExists" />
+  </wsdl:message>
+  <wsdl:message name="IService2_emailExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:emailExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPassword" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addStylist_InputMessage">
+    <wsdl:part name="parameters" element="tns:addStylist" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addStylist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addStylistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:editPrice" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:editDescription" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:editImage" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:addManager" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getStylists_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStylists" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getStylists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStylistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_stylistExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:stylistExist" />
+  </wsdl:message>
+  <wsdl:message name="IService2_stylistExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:stylistExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_searchUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:searchUser" />
+  </wsdl:message>
+  <wsdl:message name="IService2_searchUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_searchStylist_InputMessage">
+    <wsdl:part name="parameters" element="tns:searchStylist" />
+  </wsdl:message>
+  <wsdl:message name="IService2_searchStylist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchStylistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_deleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService2_deleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_deleteStylist_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteStylist" />
+  </wsdl:message>
+  <wsdl:message name="IService2_deleteStylist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteStylistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addHairstyle_InputMessage">
+    <wsdl:part name="parameters" element="tns:addHairstyle" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addHairstyle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addHairstyleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getHairstyle_InputMessage">
+    <wsdl:part name="parameters" element="tns:getHairstyle" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getHairstyle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getHairstyleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_logintype_InputMessage">
+    <wsdl:part name="parameters" element="tns:logintype" />
+  </wsdl:message>
+  <wsdl:message name="IService2_logintype_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logintypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_becomeStylist_InputMessage">
+    <wsdl:part name="parameters" element="tns:becomeStylist" />
+  </wsdl:message>
+  <wsdl:message name="IService2_becomeStylist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:becomeStylistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistPhoneNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistPhoneNumber" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistPhoneNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistPhoneNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistAddress" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistCity" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistPostalCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistPostalCode" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistPostalCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistPostalCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistUsername" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistPassword" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editStylistPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editStylistPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editSalonName_InputMessage">
+    <wsdl:part name="parameters" element="tns:editSalonName" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editSalonName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editSalonNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editSalonAdress_InputMessage">
+    <wsdl:part name="parameters" element="tns:editSalonAdress" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editSalonAdress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editSalonAdressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editSalonStreet_InputMessage">
+    <wsdl:part name="parameters" element="tns:editSalonStreet" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editSalonStreet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editSalonStreetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editSalonPostalCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:editSalonPostalCode" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editSalonPostalCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editSalonPostalCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerAddress" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerPhoneNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerPhoneNumber" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerPhoneNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerPhoneNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerUsername" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerPassword" />
+  </wsdl:message>
+  <wsdl:message name="IService2_editManagerPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editManagerPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:addProduct" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getPurchase_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPurchase" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getPurchase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPurchaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getAllReviews_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllReviews" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getAllReviews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllReviewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:addReview" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getAllTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IService2_getAllTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_logTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:logTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IService2_logTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addBankAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:addBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="IService2_addBankAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_makePurchase_InputMessage">
+    <wsdl:part name="parameters" element="tns:makePurchase" />
+  </wsdl:message>
+  <wsdl:message name="IService2_makePurchase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:makePurchaseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService2">
+    <wsdl:operation name="book">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/book" message="tns:IService2_book_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/bookResponse" message="tns:IService2_book_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/exists" message="tns:IService2_exists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/existsResponse" message="tns:IService2_exists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isReg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/isReg" message="tns:IService2_isReg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/isRegResponse" message="tns:IService2_isReg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/register" message="tns:IService2_register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/registerResponse" message="tns:IService2_register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/login" message="tns:IService2_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/loginResponse" message="tns:IService2_login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/getUser" message="tns:IService2_getUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/getUserResponse" message="tns:IService2_getUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="edit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/edit" message="tns:IService2_edit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editResponse" message="tns:IService2_edit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editUserName" message="tns:IService2_editUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editUserNameResponse" message="tns:IService2_editUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editPassword" message="tns:IService2_editPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editPasswordResponse" message="tns:IService2_editPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editPhoneNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editPhoneNumber" message="tns:IService2_editPhoneNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editPhoneNumberResponse" message="tns:IService2_editPhoneNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editAddress" message="tns:IService2_editAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editAddressResponse" message="tns:IService2_editAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/getUsers" message="tns:IService2_getUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/getUsersResponse" message="tns:IService2_getUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="emailExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/emailExists" message="tns:IService2_emailExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/emailExistsResponse" message="tns:IService2_emailExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/getPassword" message="tns:IService2_getPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/getPasswordResponse" message="tns:IService2_getPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addStylist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/addStylist" message="tns:IService2_addStylist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/addStylistResponse" message="tns:IService2_addStylist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editPrice" message="tns:IService2_editPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editPriceResponse" message="tns:IService2_editPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editDescription" message="tns:IService2_editDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editDescriptionResponse" message="tns:IService2_editDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editImage" message="tns:IService2_editImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editImageResponse" message="tns:IService2_editImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addManager">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/addManager" message="tns:IService2_addManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/addManagerResponse" message="tns:IService2_addManager_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStylists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/getStylists" message="tns:IService2_getStylists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/getStylistsResponse" message="tns:IService2_getStylists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="stylistExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/stylistExist" message="tns:IService2_stylistExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/stylistExistResponse" message="tns:IService2_stylistExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/searchUser" message="tns:IService2_searchUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/searchUserResponse" message="tns:IService2_searchUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="searchStylist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/searchStylist" message="tns:IService2_searchStylist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/searchStylistResponse" message="tns:IService2_searchStylist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/deleteUser" message="tns:IService2_deleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/deleteUserResponse" message="tns:IService2_deleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteStylist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/deleteStylist" message="tns:IService2_deleteStylist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/deleteStylistResponse" message="tns:IService2_deleteStylist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addHairstyle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/addHairstyle" message="tns:IService2_addHairstyle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/addHairstyleResponse" message="tns:IService2_addHairstyle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getHairstyle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/getHairstyle" message="tns:IService2_getHairstyle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/getHairstyleResponse" message="tns:IService2_getHairstyle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logintype">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/logintype" message="tns:IService2_logintype_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/logintypeResponse" message="tns:IService2_logintype_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="becomeStylist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/becomeStylist" message="tns:IService2_becomeStylist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/becomeStylistResponse" message="tns:IService2_becomeStylist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editStylistPhoneNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editStylistPhoneNumber" message="tns:IService2_editStylistPhoneNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editStylistPhoneNumberResponse" message="tns:IService2_editStylistPhoneNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editStylistEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editStylistEmail" message="tns:IService2_editStylistEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editStylistEmailResponse" message="tns:IService2_editStylistEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editStylistAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editStylistAddress" message="tns:IService2_editStylistAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editStylistAddressResponse" message="tns:IService2_editStylistAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editStylistCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editStylistCity" message="tns:IService2_editStylistCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editStylistCityResponse" message="tns:IService2_editStylistCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editStylistPostalCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editStylistPostalCode" message="tns:IService2_editStylistPostalCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editStylistPostalCodeResponse" message="tns:IService2_editStylistPostalCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editStylistUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editStylistUsername" message="tns:IService2_editStylistUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editStylistUsernameResponse" message="tns:IService2_editStylistUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editStylistPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editStylistPassword" message="tns:IService2_editStylistPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editStylistPasswordResponse" message="tns:IService2_editStylistPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editSalonName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editSalonName" message="tns:IService2_editSalonName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editSalonNameResponse" message="tns:IService2_editSalonName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editSalonAdress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editSalonAdress" message="tns:IService2_editSalonAdress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editSalonAdressResponse" message="tns:IService2_editSalonAdress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editSalonStreet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editSalonStreet" message="tns:IService2_editSalonStreet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editSalonStreetResponse" message="tns:IService2_editSalonStreet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editSalonPostalCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editSalonPostalCode" message="tns:IService2_editSalonPostalCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editSalonPostalCodeResponse" message="tns:IService2_editSalonPostalCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editManagerAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editManagerAddress" message="tns:IService2_editManagerAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editManagerAddressResponse" message="tns:IService2_editManagerAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editManagerPhoneNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editManagerPhoneNumber" message="tns:IService2_editManagerPhoneNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editManagerPhoneNumberResponse" message="tns:IService2_editManagerPhoneNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editManagerEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editManagerEmail" message="tns:IService2_editManagerEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editManagerEmailResponse" message="tns:IService2_editManagerEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editManagerUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editManagerUsername" message="tns:IService2_editManagerUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editManagerUsernameResponse" message="tns:IService2_editManagerUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editManagerPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/editManagerPassword" message="tns:IService2_editManagerPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/editManagerPasswordResponse" message="tns:IService2_editManagerPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/addProduct" message="tns:IService2_addProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/addProductResponse" message="tns:IService2_addProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/getPurchase" message="tns:IService2_getPurchase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/getPurchaseResponse" message="tns:IService2_getPurchase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllReviews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/getAllReviews" message="tns:IService2_getAllReviews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/getAllReviewsResponse" message="tns:IService2_getAllReviews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/addReview" message="tns:IService2_addReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/addReviewResponse" message="tns:IService2_addReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/getAllTransactions" message="tns:IService2_getAllTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/getAllTransactionsResponse" message="tns:IService2_getAllTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/logTransaction" message="tns:IService2_logTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/logTransactionResponse" message="tns:IService2_logTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addBankAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/addBankAccount" message="tns:IService2_addBankAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/addBankAccountResponse" message="tns:IService2_addBankAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="makePurchase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/makePurchase" message="tns:IService2_makePurchase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/makePurchaseResponse" message="tns:IService2_makePurchase_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService2" type="tns:IService2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="book">
+      <soap:operation soapAction="http://tempuri.org/IService2/book" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exists">
+      <soap:operation soapAction="http://tempuri.org/IService2/exists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isReg">
+      <soap:operation soapAction="http://tempuri.org/IService2/isReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="register">
+      <soap:operation soapAction="http://tempuri.org/IService2/register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/IService2/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap:operation soapAction="http://tempuri.org/IService2/getUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edit">
+      <soap:operation soapAction="http://tempuri.org/IService2/edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editUserName">
+      <soap:operation soapAction="http://tempuri.org/IService2/editUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editPassword">
+      <soap:operation soapAction="http://tempuri.org/IService2/editPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editPhoneNumber">
+      <soap:operation soapAction="http://tempuri.org/IService2/editPhoneNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editAddress">
+      <soap:operation soapAction="http://tempuri.org/IService2/editAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <soap:operation soapAction="http://tempuri.org/IService2/getUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="emailExists">
+      <soap:operation soapAction="http://tempuri.org/IService2/emailExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPassword">
+      <soap:operation soapAction="http://tempuri.org/IService2/getPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addStylist">
+      <soap:operation soapAction="http://tempuri.org/IService2/addStylist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editPrice">
+      <soap:operation soapAction="http://tempuri.org/IService2/editPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDescription">
+      <soap:operation soapAction="http://tempuri.org/IService2/editDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editImage">
+      <soap:operation soapAction="http://tempuri.org/IService2/editImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addManager">
+      <soap:operation soapAction="http://tempuri.org/IService2/addManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStylists">
+      <soap:operation soapAction="http://tempuri.org/IService2/getStylists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stylistExist">
+      <soap:operation soapAction="http://tempuri.org/IService2/stylistExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchUser">
+      <soap:operation soapAction="http://tempuri.org/IService2/searchUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchStylist">
+      <soap:operation soapAction="http://tempuri.org/IService2/searchStylist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService2/deleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteStylist">
+      <soap:operation soapAction="http://tempuri.org/IService2/deleteStylist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addHairstyle">
+      <soap:operation soapAction="http://tempuri.org/IService2/addHairstyle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHairstyle">
+      <soap:operation soapAction="http://tempuri.org/IService2/getHairstyle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logintype">
+      <soap:operation soapAction="http://tempuri.org/IService2/logintype" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="becomeStylist">
+      <soap:operation soapAction="http://tempuri.org/IService2/becomeStylist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editStylistPhoneNumber">
+      <soap:operation soapAction="http://tempuri.org/IService2/editStylistPhoneNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editStylistEmail">
+      <soap:operation soapAction="http://tempuri.org/IService2/editStylistEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editStylistAddress">
+      <soap:operation soapAction="http://tempuri.org/IService2/editStylistAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editStylistCity">
+      <soap:operation soapAction="http://tempuri.org/IService2/editStylistCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editStylistPostalCode">
+      <soap:operation soapAction="http://tempuri.org/IService2/editStylistPostalCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editStylistUsername">
+      <soap:operation soapAction="http://tempuri.org/IService2/editStylistUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editStylistPassword">
+      <soap:operation soapAction="http://tempuri.org/IService2/editStylistPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editSalonName">
+      <soap:operation soapAction="http://tempuri.org/IService2/editSalonName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editSalonAdress">
+      <soap:operation soapAction="http://tempuri.org/IService2/editSalonAdress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editSalonStreet">
+      <soap:operation soapAction="http://tempuri.org/IService2/editSalonStreet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editSalonPostalCode">
+      <soap:operation soapAction="http://tempuri.org/IService2/editSalonPostalCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editManagerAddress">
+      <soap:operation soapAction="http://tempuri.org/IService2/editManagerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editManagerPhoneNumber">
+      <soap:operation soapAction="http://tempuri.org/IService2/editManagerPhoneNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editManagerEmail">
+      <soap:operation soapAction="http://tempuri.org/IService2/editManagerEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editManagerUsername">
+      <soap:operation soapAction="http://tempuri.org/IService2/editManagerUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editManagerPassword">
+      <soap:operation soapAction="http://tempuri.org/IService2/editManagerPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addProduct">
+      <soap:operation soapAction="http://tempuri.org/IService2/addProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase">
+      <soap:operation soapAction="http://tempuri.org/IService2/getPurchase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllReviews">
+      <soap:operation soapAction="http://tempuri.org/IService2/getAllReviews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addReview">
+      <soap:operation soapAction="http://tempuri.org/IService2/addReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllTransactions">
+      <soap:operation soapAction="http://tempuri.org/IService2/getAllTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logTransaction">
+      <soap:operation soapAction="http://tempuri.org/IService2/logTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBankAccount">
+      <soap:operation soapAction="http://tempuri.org/IService2/addBankAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makePurchase">
+      <soap:operation soapAction="http://tempuri.org/IService2/makePurchase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service2">
+    <wsdl:port name="BasicHttpBinding_IService2" binding="tns:BasicHttpBinding_IService2">
+      <soap:address location="http://localhost:50557/Service2.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

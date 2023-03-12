@@ -1,0 +1,233 @@
+body {
+  font-family: 'Anaheim';
+  font-size: 1.2em;
+}
+
+#outside {
+  background-color: lightgoldenrodyellow;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 70%;
+  /* To see the limits of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  
+}
+#survey-form {
+  background-color: white;
+}
+ 
+fieldset { 
+  border:1px solid lightgray;
+  margin: 10px;
+ }
+
+legend {
+  font-weight: 700;
+}
+
+#number {
+  width: 150px;
+}
+
+
+div + div {
+  margin-top: 1em;
+  }
+
+/* label {
+  /* To make sure that all label have the same size and are properly align */
+  /* display: inline-block; */
+  /* width: 80px; */
+  /* text-align: right; */
+} */
+
+input, textarea {
+  /* To make sure that all text field have the same font settings
+     By default, textarea are set with a monospace font */
+  /* font: 1em sans-serif; */
+
+  /* To give the same size to all text field */
+  width: 200px;
+
+/*   -moz-box-sizing: border-box;
+       box-sizing: border-box; */
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* To give a little highligh on active elements */
+  border-color: OrangeRed;
+}
+
+textarea {
+  /* To properly align multiline text field with their label */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5em;
+
+  /* To allow users to resize any textarea vertically
+     It works only on Chrome, Firefox and Safari */
+  resize: vertical;
+}
+
+.button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  margin: .5em;
+  font-size: 1em;
+  text-transform: capitalize;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  
+}
+
+#submitbutton {
+  display: flex; 
+  justify-content: center;
+}
+.checked {
+  color: orange;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 100px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px; 
+} 
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+
+.rating {
+  display: inline-block;
+  width: 100%;
+  margin-top: -40px;
+  margin-left: -120px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.like,
+.dislike {
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.like:hover {
+  transition:all .2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.dislike:hover {
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
+.like.active {
+  color: #008000;
+}
+.dislike.active {
+  color: #FF0000;
+  
+}
+
+
+
+
+.face {
+  display: inline-block;
+  width: 100%;
+  margin-top: -40px;
+  padding-top: 40px;
+  text-align: center;
+}
+.love,
+.smile,
+.angry{
+  
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+}
+.love:hover {
+    color: #008000;
+  transition:all .2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.smile:hover {
+      color: #FFFF00;
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
+.angry:hover {
+  color: #FF0000;
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
+.love.active {
+  color: #008000;
+}
+.smile.active {
+  color: #FFFF00;
+  
+}
+.angry.active {
+  color: #FF0000;
+  
+}
+
